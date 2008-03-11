@@ -1,5 +1,7 @@
 package IO::Unread;
 
+use 5.008001;
+
 use warnings;
 use strict;
 
@@ -8,9 +10,10 @@ use XSLoader;
 use Symbol qw/qualify_to_ref/;
 use Scalar::Util qw/openhandle/;
 
-our $VERSION   = '1.02';
-
-BEGIN { XSLoader::load __PACKAGE__, $VERSION }
+BEGIN {
+    our $VERSION   = '1.03';
+    XSLoader::load __PACKAGE__, $VERSION;
+}
 
 my $USE_PERLIO = HAVE_PERLIO_LAYERS;
 my $Debug;
@@ -278,12 +281,9 @@ None by default; C<unread>, C<ungetc> on request.
 C<ungetc> is subject to the whims of your libc if you're not using
 perlio.
 
-I don't know how to do ungetc in sfio for those pre-5.6 systems which
-use it without the PerlIO abstraction layer.
+=head1 COPYRIGHT
 
-=head1 AUTHOR
-
-Copyright (C) 2003 Ben Morrow <IO-Unread@morrow.me.uk>
+Copyright 2003 Ben Morrow <ben@morrow.me.uk>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
