@@ -1,5 +1,0 @@
-^blib/
-^_Inline/
-^Makefile(.old)?$
-^pm_to_blib$
-^Unread.inl$

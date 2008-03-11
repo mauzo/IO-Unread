@@ -1,13 +1,15 @@
-use 5.6.0;
-use Inline::MakeMaker;
+use inc::Module::Install;
 
-WriteMakefile(
-    NAME		=> 'IO::Unread',
-    VERSION_FROM	=> 'Unread.pm',
-    PREREQ_PM		=> { 'Inline::C'  => '0.44',
-                             'PerlIO'     => '1.00',
-                             'Test::More' => '0.46'
-                           }, 
-    ABSTRACT_FROM       => 'Unread.pm',
-    AUTHOR              => 'Ben Morrow <ben@morrow.me.uk>'
-);
+name           ('IO-Unread');
+author         ('Ben Morrow <IO-Unread@morrow.me.uk>');
+version_from   ('lib/IO/Unread.pm');
+license        ('perl');
+
+requires       ('perl'       => 5.008);
+build_requires ('Inline::C'  => 0.44);
+build_requires ('Test::More' => 0.46);
+
+include('ExtUtils::AutoInstall');
+auto_install();
+
+&Inline->write;

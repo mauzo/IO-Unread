@@ -5,10 +5,10 @@ use strict;
 
 use Symbol qw/qualify_to_ref/;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Inline Config =>
-  VERSION => '0.03',
+  VERSION => '0.04',
   NAME    => "IO::Unread";
 
 use Inline C => <<'EOC';
