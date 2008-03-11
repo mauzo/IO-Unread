@@ -84,6 +84,8 @@ SKIP: {
     $z->close;
 }
 
+no warnings "io";
+
 eval { $rv = unread IN, "a" };
 ok !$@,           'closed FH (eval)';
 ok !defined($rv), 'closed FH (fail)';

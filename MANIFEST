@@ -1,14 +1,9 @@
 Changes
-inc/ExtUtils/AutoInstall.pm
-inc/Module/Install.pm
-inc/Module/Install/AutoInstall.pm
-inc/Module/Install/Base.pm
-inc/Module/Install/Include.pm
-inc/Module/Install/Inline.pm
-inc/Module/Install/Makefile.pm
-inc/Module/Install/Metadata.pm
 lib/IO/Unread.pm
+lib/IO/Unread.xs
 Makefile.PL
+Build.PL
 MANIFEST			This list of files
 README
 t/1.t
+META.yml                                 Module meta-data (added by MakeMaker)

@@ -1,0 +1,14 @@
+--- #YAML:1.0
+name: IO-Unread
+version: 0.06
+license: perl
+distribution_type: module
+requires: {}
+recommends: {}
+build_requires: {}
+conflicts: {}
+provides:
+  IO::Unread:
+    file: lib/IO/Unread.pm
+    version: 0.06
+generated_by: Module::Build version 0.21
