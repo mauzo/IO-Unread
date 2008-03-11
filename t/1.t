@@ -120,3 +120,5 @@ ok $@,           'ref to scalar (eval)';
 
 open NOTAFH, "<test"; # shut -w up
 open NOGLOB, "<test";
+
+unlink "test";

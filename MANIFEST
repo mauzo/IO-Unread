@@ -1,6 +1,10 @@
 Changes
 Makefile.PL
 MANIFEST
+MANIFEST.SKIP
+SIGNATURE
 README
 Unread.pm
+t/0-signature.t
 t/1.t
+META.yml                                 Module meta-data (added by MakeMaker)

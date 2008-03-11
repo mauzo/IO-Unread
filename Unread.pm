@@ -5,10 +5,10 @@ use strict;
 
 use Symbol qw/qualify_to_ref/;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Inline Config =>
-  VERSION => '0.02',
+  VERSION => '0.03',
   NAME    => "IO::Unread";
 
 use Inline C => <<'EOC';
@@ -42,7 +42,9 @@ EOC
 sub unread (*@) {
     no warnings 'uninitialized';
 
+    $^W = 0;
     my $fh = qualify_to_ref shift, caller;
+    $^W = 1;
     my $str = @_ ? join ("", reverse @_) : $_;
 
     my $rv = _unread $fh, $str;

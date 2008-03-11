@@ -1,4 +1,4 @@
-IO::Unread version 1.00
+IO::Unread version 0.03
 =======================
 
 This module provides one function, unread(), which allows you to push
