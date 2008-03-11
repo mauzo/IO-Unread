@@ -1,0 +1,10 @@
+Revision history for Perl extension IO::Unread.
+
+0.02 Mon Nov 10 02:12:00 2003
+    Removed Exporter
+    Fixed tests to skip IO::File if not available
+
+0.01  Mon Nov 10 02:11:39 2003
+	- original version; created by h2xs 1.22 with options
+		-PAXn IO::Unread
+        Created Inline C code, tests
