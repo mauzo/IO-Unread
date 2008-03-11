@@ -8,7 +8,7 @@ use XSLoader;
 use Symbol qw/qualify_to_ref/;
 use Scalar::Util qw/openhandle/;
 
-our $VERSION   = '1.01';
+our $VERSION   = '1.02';
 
 BEGIN { XSLoader::load __PACKAGE__, $VERSION }
 

@@ -1,6 +1,7 @@
 Changes
 lib/IO/Unread.pm
 lib/IO/Unread.xs
+lib/IO/ppport.h
 Makefile.PL
 Build.PL
 MANIFEST			This list of files

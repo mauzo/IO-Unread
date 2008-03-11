@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: IO-Unread
-version: 1.01
+version: 1.02
 license: perl
 distribution_type: module
 requires: {}
@@ -10,8 +10,8 @@ conflicts: {}
 provides:
   IO::Unread:
     file: lib/IO/Unread.pm
-    version: 1.01
+    version: 1.02
   IO::Unread::Tied:
     file: lib/IO/Unread.pm
-    version: 1.01
+    version: 1.02
 generated_by: Module::Build version 0.21

@@ -1,5 +1,11 @@
 Revision history for Perl extension IO::Unread.
 
+1.02 2004-04-19
+    Added ppport.h to MANIFEST (d'oh!)
+
+1.00 2004-04-18
+    Added IO::Unread::Tied for when PerlIO isn't available
+
 0.03 2003-12-05
     Signed
 
