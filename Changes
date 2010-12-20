@@ -1,5 +1,8 @@
 Revision history for Perl extension IO::Unread.
 
+1.04 2010-12-20
+    Minor portability fixes, mostly from ikegami [RT#57775].
+
 1.03 2008-03-11
     Fixed a stupid error in Unread.pm (does anyone actually use this?)
 

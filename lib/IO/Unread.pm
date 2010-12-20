@@ -11,7 +11,7 @@ use Symbol qw/qualify_to_ref/;
 use Scalar::Util qw/openhandle/;
 
 BEGIN {
-    our $VERSION   = '1.03';
+    our $VERSION   = '1.04';
     XSLoader::load __PACKAGE__, $VERSION;
 }
 
