@@ -34,16 +34,19 @@ CODE:
         IO *io = GvIO(gv);
         
         if(!io)
-            XSRETURN_UNDEF;
-        if (IoTYPE(io) == IoTYPE_WRONLY) {
+            RETVAL = &PL_sv_undef;
+        else if (IoTYPE(io) == IoTYPE_WRONLY) {
             const char *const name = 
                 gv && isGV_with_GP(gv) ? GvENAME(gv) : NULL;
             Perl_warner(aTHX_ packWARN(WARN_IO), 
                 "Filehandle %s opened only for output", name);
-            XSRETURN_NO;
+            RETVAL = &PL_sv_no;
         }
-        XSRETURN_YES;
+        else
+            RETVAL = &PL_sv_yes;
     }
+OUTPUT:
+    RETVAL
 
 IV
 _PerlIO_unread (PerlIO *io, SV *str)
