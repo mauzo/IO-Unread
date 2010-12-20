@@ -36,8 +36,10 @@ CODE:
         if(!io)
             XSRETURN_UNDEF;
         if (IoTYPE(io) == IoTYPE_WRONLY) {
-            if (ckWARN(WARN_IO))
-                Perl_report_evil_fh(aTHX_ gv, io, OP_phoney_OUTPUT_ONLY);
+            const char *const name = 
+                gv && isGV_with_GP(gv) ? GvENAME(gv) : NULL;
+            Perl_warner(aTHX_ packWARN(WARN_IO), 
+                "Filehandle %s opened only for output", name);
             XSRETURN_NO;
         }
         XSRETURN_YES;
