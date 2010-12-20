@@ -1,3 +1,7 @@
 .git
 .bak$
 ^Makefile$
+^MYMETA.yml$
+^MANIFEST.SKIP$
+^_build
+^Build$
