@@ -45,7 +45,7 @@ CODE:
         XSRETURN_YES;
     }
 
-ssize_t 
+IV
 _PerlIO_unread (PerlIO *io, SV *str)
 PROTOTYPE: *$
 CODE:
